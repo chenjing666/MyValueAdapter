@@ -1,4 +1,4 @@
-package com.example.myvalueadapter;
+package com.example.myvalueadapter.bean;
 
 /**
  * Created by Howie on 2017/4/10.

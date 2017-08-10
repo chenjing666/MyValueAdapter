@@ -17,6 +17,7 @@ import com.example.myvalueadapter.R;
 
 
 /**
+ * 倒计时
  * Created by hasee on 2017/5/5.
  */
 

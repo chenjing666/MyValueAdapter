@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.myvalueadapter.ShareVo;
+import com.example.myvalueadapter.bean.ShareVo;
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMShareListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;

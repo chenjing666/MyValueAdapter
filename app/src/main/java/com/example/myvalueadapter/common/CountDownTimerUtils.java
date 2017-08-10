@@ -12,6 +12,7 @@ import com.example.myvalueadapter.R;
 
 
 /**
+ * 获取验证码
  * Created by hasee on 2017/5/4.
  */
 public class CountDownTimerUtils extends CountDownTimer {
