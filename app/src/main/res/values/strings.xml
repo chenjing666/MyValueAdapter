@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyValueAdapter</string>
+    <string name="internal_storage">内存</string>
+</resources>
