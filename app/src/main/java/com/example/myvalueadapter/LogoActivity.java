@@ -70,7 +70,7 @@ public class LogoActivity extends AppCompatActivity {
     private void CountProgress() {
         mCountDownProgressView.setOnClickListener(listener);
         mCountDownProgressView.setText("跳");
-        mCountDownProgressView.setTimeMillis(6000);
+        mCountDownProgressView.setTimeMillis(20000);
         mCountDownProgressView.start();
         mCountDownProgressView.setProgressListener(new CountDownProgressView.OnProgressListener() {
             @Override
