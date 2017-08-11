@@ -11,4 +11,7 @@
     <color name="blue_touch_user">#B3B3B3</color><!--主色 按住蓝 -->
     <color name="background_user">#F2F2F2</color><!--主色 按住蓝 -->
     <color name="black_user">#333333</color><!--主色  -->
+
+    <color name="scratch_start_gradient">#e5e5e5</color>
+    <color name="scratch_end_gradient">#cccccc</color>
 </resources>
