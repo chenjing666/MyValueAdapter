@@ -4,4 +4,14 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="background_color">#6f57d6</color>
+
+    <color name="bg_white">#E4E4E4</color>
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="blue_user">#0071BC</color><!--主色蓝 -->
+    <color name="blue_touch_user">#B3B3B3</color><!--主色 按住蓝 -->
+    <color name="background_user">#F2F2F2</color><!--主色 按住蓝 -->
+    <color name="black_user">#333333</color><!--主色  -->
+
+    <color name="scratch_start_gradient">#e5e5e5</color>
+    <color name="scratch_end_gradient">#cccccc</color>
 </resources>
