@@ -1,35 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.myvalueadapter.MainActivity">
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:layout_width="@dimen/x600"
-        android:layout_height="@dimen/y200"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:text="主页面"
-        android:textSize="@dimen/x80" />
-
-    <com.example.myvalueadapter.views.ScratchImageView
-        android:id="@+id/sample_image"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/white"
-        android:src="@drawable/img_sample2" />
-
-    <com.example.myvalueadapter.views.ScratchTextView
-        android:id="@+id/sample_tv"
+    <!--顶部操作栏-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/main_header"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center"
-        android:textSize="@dimen/x60"
-        android:layout_below="@+id/sample_image"
-        android:layout_marginTop="10dp"
-        android:text="hello" />
-</RelativeLayout>
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay"
+        app:elevation="@dimen/x20">
+
+        <LinearLayout
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#41ffffff">
+
+            <!--顶部搜索-->
+            <LinearLayout
+                android:id="@+id/layout_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/frame_search_main">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="18dp"
+                    android:src="@drawable/icon_search" />
+
+                <TextView
+                    android:id="@+id/edit_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:background="@null"
+                    android:hint="点这里搜索"
+                    android:textColorHint="#999999"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp">
+                <!--消息提示图片-->
+                <ImageView
+                    android:id="@+id/icon_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_hint" />
+                <!--banner点图-->
+                <ImageView
+                    android:id="@+id/message_dot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/icon_message_point" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--中间内容主体-->
+        <RelativeLayout
+            android:id="@+id/main_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.myvalueadapter.main.widget.MyViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+        <!--底部导航-->
+        <FrameLayout
+            android:id="@+id/main_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <!--nav-->
+            <com.ashokvarma.bottomnavigation.BottomNavigationBar
+                android:id="@+id/nav"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/color6b9fe5" />
+
+        </FrameLayout>
+
+        <!--发布按钮-->
+        <ImageView
+            android:id="@+id/img_add"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

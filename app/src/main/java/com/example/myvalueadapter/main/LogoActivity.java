@@ -1,4 +1,4 @@
-package com.example.myvalueadapter;
+package com.example.myvalueadapter.main;
 
 import android.Manifest;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.apkfuns.logutils.LogUtils;
+import com.example.myvalueadapter.R;
 import com.example.myvalueadapter.common.AvatarLoadOptions;
 import com.example.myvalueadapter.common.CountDownProgressView;
 import com.example.myvalueadapter.user.LoginActivity;

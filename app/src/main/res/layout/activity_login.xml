@@ -199,6 +199,26 @@
         android:layout_marginBottom="30dp"
         android:text="" />
 
+    <com.example.myvalueadapter.views.ScratchImageView
+        android:id="@+id/sample_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/sample_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:src="@drawable/img_sample2" />
+
+    <com.example.myvalueadapter.views.ScratchTextView
+        android:id="@+id/sample_tv"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/btn_login"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="hello"
+        android:textSize="@dimen/x30" />
     <Button
         android:id="@+id/btn_login"
         android:layout_width="wrap_content"

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">MyValueAdapter</string>
     <string name="internal_storage">内存</string>
+    <!--模块-->
+    <string name="module_games">游戏</string>
+    <string name="module_leveling">竞技厅</string>
+    <string name="module_trade_stage">交易厅</string>
+    <string name="module_user_center">我的</string>
 </resources>

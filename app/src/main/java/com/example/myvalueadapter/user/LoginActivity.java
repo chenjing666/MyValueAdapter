@@ -10,8 +10,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.myvalueadapter.MainActivity;
-import com.example.myvalueadapter.test.SlideActivity;
+import com.example.myvalueadapter.main.MainActivity;
 import com.example.myvalueadapter.R;
 import com.example.myvalueadapter.common.EditTextClearTools;
 
