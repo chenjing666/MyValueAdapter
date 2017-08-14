@@ -16,4 +16,12 @@
             layout="@layout/view_content" />
     </com.example.myvalueadapter.myslidingmenu.SlidingMenu>
 
+    <com.example.myvalueadapter.views.CustomView
+        android:id="@+id/customView"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </com.example.myvalueadapter.views.CustomView>
 </RelativeLayout>

@@ -9,6 +9,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.myvalueadapter.R;
+import com.example.myvalueadapter.myslidingmenu.SlidingMenu;
+import com.example.myvalueadapter.views.CustomView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +24,8 @@ public class MySlideActivity extends AppCompatActivity {
     ListView menuLv;
     @BindView(R.id.content_lv)
     ListView contentLv;
+    @BindView(R.id.slidingmenu)
+    SlidingMenu slidingmenu;
     private List<String> list = new ArrayList<>();
 
     @Override
@@ -29,7 +33,6 @@ public class MySlideActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_slide);
         ButterKnife.bind(this);
-
 
         for (int i = 0; i <= 20; i++) {
             list.add("测试" + i);

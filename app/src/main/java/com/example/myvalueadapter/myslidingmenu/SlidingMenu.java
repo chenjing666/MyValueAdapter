@@ -11,6 +11,7 @@ import android.view.WindowManager;
 import android.widget.Scroller;
 
 /**
+ * 仿QQ侧滑
  * Created by Administrator on 2017/8/14 0014.
  */
 
@@ -65,29 +66,29 @@ public class SlidingMenu extends ViewGroup {
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
 
-        boolean intercept=false;
-        int x= (int) ev.getX();
-        int y= (int) ev.getY();
-        switch (ev.getAction()){
+        boolean intercept = false;
+        int x = (int) ev.getX();
+        int y = (int) ev.getY();
+        switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                intercept=false;
+                intercept = false;
                 break;
             case MotionEvent.ACTION_MOVE:
-                int deltaX=(int) ev.getX()-mLastXIntercept;
-                int deltaY=(int) ev.getY()-mLastYIntercept;
-                if(Math.abs(deltaX)>Math.abs(deltaY)){//左右活动
-                    intercept=true;
-                }else{//上下滑动
-                    intercept=false;
+                int deltaX = (int) ev.getX() - mLastXIntercept;
+                int deltaY = (int) ev.getY() - mLastYIntercept;
+                if (Math.abs(deltaX) > Math.abs(deltaY)) {//左右活动
+                    intercept = true;
+                } else {//上下滑动
+                    intercept = false;
                 }
                 break;
             case MotionEvent.ACTION_UP:
-                intercept=false;
+                intercept = false;
                 break;
         }
 
-        mLastX=mLastXIntercept=x;
-        mLastY=mLastYIntercept=y;
+        mLastX = mLastXIntercept = x;
+        mLastY = mLastYIntercept = y;
 
         return intercept;
     }
