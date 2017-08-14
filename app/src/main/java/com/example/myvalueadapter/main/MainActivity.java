@@ -1,5 +1,6 @@
 package com.example.myvalueadapter.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -23,6 +24,8 @@ import com.example.myvalueadapter.main.widget.MyViewPager;
 import com.example.myvalueadapter.net.NetChangeObserver;
 import com.example.myvalueadapter.net.NetStateReceiver;
 import com.example.myvalueadapter.net.NetUtils;
+import com.example.myvalueadapter.test.MySlideActivity;
+import com.example.myvalueadapter.test.SlideActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,10 +81,12 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         imgAdd.setBackgroundResource(R.drawable.img_add_blue);
+                        //仿QQ的侧面滑动
+                        startActivity(new Intent(MainActivity.this, MySlideActivity.class));
                         //if (TextUtils.isEmpty(SPUserUtils.getString(AppConsts.SP_TOKEN))) {
                         //    startActivity(new Intent(MainActivity.this, LoginActivity.class));
                         //} else {
-               //         ReleaseActivity.start(MainActivity.this);
+                        //         ReleaseActivity.start(MainActivity.this);
                         //}
                     }
                 }, 50);
@@ -126,6 +131,8 @@ public class MainActivity extends AppCompatActivity {
                         viewPager.setCurrentItem(position - 1);
                         break;
                     case 4:
+                        //侧面滑动，感觉不灵敏
+                        startActivity(new Intent(MainActivity.this, SlideActivity.class));
 //                        if (TextUtils.isEmpty(SPUserUtils.getString(AppConsts.SP_TOKEN))) {
 //                            startActivity(new Intent(MainActivity.this, LoginActivity.class));
 //                        } else {
@@ -149,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     /**
      * viewPager设置
      */
@@ -195,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private class MyPagerAdapter extends FragmentPagerAdapter {
 
         List<BaseFragment> fragments;
