@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.example.myvalueadapter.R;
 import com.example.myvalueadapter.myslidingmenu.SlidingMenu;
-import com.example.myvalueadapter.views.CustomView;
+import com.example.myvalueadapter.utils.StatusBarUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class MySlideActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_slide);
         ButterKnife.bind(this);
-
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.background_color));
         for (int i = 0; i <= 20; i++) {
             list.add("测试" + i);
         }
