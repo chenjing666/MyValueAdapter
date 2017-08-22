@@ -19,9 +19,14 @@
     <com.example.myvalueadapter.views.CustomView
         android:id="@+id/customView"
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_width="200dp"
+        android:layout_height="200dp">
 
     </com.example.myvalueadapter.views.CustomView>
+
+    <com.example.myvalueadapter.views.GestureView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/avatar" />
 </RelativeLayout>

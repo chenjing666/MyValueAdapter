@@ -15,4 +15,8 @@
         <attr name="textColor_DaoJiShi" format="color"></attr>//改半天居然是name重复
 
     </declare-styleable>
+    <declare-styleable name="SketchView">
+        <attr name="background_color" format="color" />
+        <attr name="size" format="dimension" />
+    </declare-styleable>
 </resources>
