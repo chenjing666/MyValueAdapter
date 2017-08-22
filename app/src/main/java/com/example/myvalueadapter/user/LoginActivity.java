@@ -9,10 +9,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.myvalueadapter.main.MainActivity;
 import com.example.myvalueadapter.R;
 import com.example.myvalueadapter.common.EditTextClearTools;
+import com.example.myvalueadapter.main.MainActivity;
+import com.example.myvalueadapter.views.ScratchImageView;
+import com.example.myvalueadapter.views.ScratchTextView;
+import com.example.myvalueadapter.views.SketchView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -55,6 +59,12 @@ public class LoginActivity extends AppCompatActivity {
     RelativeLayout relativeLayoutaotu;
     @BindView(R.id.textView4)
     TextView textView4;
+    @BindView(R.id.sketch_view)
+    SketchView sketchView;
+    @BindView(R.id.sample_image)
+    ScratchImageView sampleImage;
+    @BindView(R.id.sample_tv)
+    ScratchTextView sampleTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,13 +91,17 @@ public class LoginActivity extends AppCompatActivity {
 //        //状态栏显示处于低能显示状态(low profile模式)，状态栏上一些图标显示会被隐藏。
 //        loginactivity.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
         ButterKnife.bind(this);
+        sketchView.startAnimation();//开启自定义view的动画
         EditTextClearTools.addclerListener(phonenumber, delPhonenumber);
         EditTextClearTools.addclerListener(password, delPassword);
     }
 
-    @OnClick({R.id.btn_login, R.id.loginButton})
+    @OnClick({R.id.btn_login, R.id.loginButton, R.id.sketch_view})
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.sketch_view:
+                Toast.makeText(this, "我是自定义view", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.loginButton:
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
                 finish();
@@ -106,5 +120,4 @@ public class LoginActivity extends AppCompatActivity {
                 break;
         }
     }
-
 }
